@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<header>
+
+</header>
+<body>
+
+
+
+
+
+<h1>
+    <p>
+       Showing selected article
+    </p>
+</h1>
+
+<h3>
+    <p>
+       title: <%= @article[:title] %>
+    </p>
+</h3>
+
+
+
+<h3>
+    <p>
+       description: <%= @article[:description] %>
+    </p>
+</h3>
+
+
+<contrainer display='inline'>
+  <div>
+  
+  </div>
+  <div>
+    <h3> card1 </h3>
+  </div>
+  <%= link_to 'home',root_path %>
+  <%= image_tag '1.jpeg' %>
+  <%= link_to image_tag('1.jpeg'), 'www.mashrurhossain.com' %>
+</contrainer>
+
+</body>
+</html>
