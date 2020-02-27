@@ -5,14 +5,37 @@
 </header>
 <body>
 
+<%= link_to "Create new article ", new_article_path%>
 
 
-<p>Create an article</p>
 
 
 <contrainer display='inline'>
   <div>
-    <h3> card1 </h3>
+
+    <table>
+
+      <tr>
+        <th>title</th>
+        <th>description</th>
+      </tr>
+
+      <% @articles.each do |article| %>
+        <tr>
+
+            <td> <%= article.title %> </td>
+            <td> <%= article.description %> </td>
+            <td> <%= link_to 'edit', edit_article_path(article) %> </td>
+            <td> <%= link_to 'show', article_path(article) %> </td>
+
+
+        </tr>
+
+      <% end %>
+
+
+    </table>
+
   </div>
   <div>
     <h3> card1 </h3>

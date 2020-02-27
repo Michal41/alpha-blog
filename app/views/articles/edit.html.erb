@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<header>
-  <h1>Create an article</h1>
-</header>
-<body>
 
+<h1>  Edit page </h1>
 
 <% if @article.errors.any? %>
 <ul>
@@ -28,7 +23,7 @@
         <%= f.text_area :description %>
       </p>
       <p>
-        <%= f.submit 'dodaj' %>
+        <%= f.submit 'edytuj' %>
       </p>    
 
     <% end %>
@@ -39,9 +34,7 @@
   <%= link_to 'home',root_path %>
   <%= image_tag '1.jpeg' %>
   <%= link_to image_tag('1.jpeg'), 'www.mashrurhossain.com' %>
+
+  <%= link_to 'back to articles listing', articles_path %>
+
 </contrainer>
-
-<%= link_to 'back to articles listiong', articles_path %>
-
-</body>
-</html>
