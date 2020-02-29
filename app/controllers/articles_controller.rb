@@ -2,8 +2,7 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = Article.all
-		puts "+++++++++++++++++++++++++++++"
-		puts @articles
+
 	end
 
 	def new
@@ -18,7 +17,7 @@ class ArticlesController < ApplicationController
 			flash[:notice]='Article was succesly created'
 			redirect_to article_path(@article)
 		else
-			render 'edit'
+			render 'new'
 		end
 	end
 
@@ -26,9 +25,16 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 	end
 
+	def destroy
+		@article= Article.find(params[:id])
+		@article.destroy
+		flash[:notice]= "Article was Succesfully deleted"
+		redirect_to articles_path
+	end
 
 	def edit
 		@article = Article.find(params[:id])
+
 	end
 
 	def update
