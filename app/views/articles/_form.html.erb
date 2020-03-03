@@ -1,15 +1,4 @@
-
-<% if @article.errors.any? %>
-<ul>
-  <% @article.errors.full_messages.each do |msg| %>
-    <li>
-      <%= msg %>
-    </li>
-
-  <% end %>
-<% end %>
-</ul>
-
+<%= render 'shared/errors', obj:@article %>
 
 <div>
 	<%= form_for @article, html:{class: "form-horizontal"} do |f|%>
