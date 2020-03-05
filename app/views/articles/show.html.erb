@@ -5,15 +5,15 @@
 
 
 
-<div class='well col-xs-8 col-xs-offset-2' id="article-show">
+<div class='well col-xs-8 col-xs-offset-2'>
    <h4 class="center description">
    		<strong>Description: </strong>
    </h4>
    <hr>
-   <div class="description-content">
-   	<%= simple_format(@article[:description]) %>
-   </div>
    <div class='article-actions'>
+   	<%= simple_format(@article[:description]) %>
+  
+   
    		<%= link_to 'View all articles', articles_path, class: "btn btn-xs btn-success" %>
 
    		<%= link_to 'Edit article', edit_article_path(@article), class:"btn btn-xs btn-primary" %>
