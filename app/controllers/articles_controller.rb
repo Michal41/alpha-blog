@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
 	def create
 		#render plain: params[:article]
 		@article = Article.new(article_params)
-		@article.user=User.first
+		@article.user=User.last
 		@article.save
 		if @article.save
 			flash[:success]='Article was succesly created'
