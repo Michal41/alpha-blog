@@ -19,6 +19,14 @@ $navbar-default-bg: #2f302f;
 	text-decoration: none;
 }
 
+
+
+.listing{
+	list-style: none;
+	padding-left: 0;
+
+}
+
 .center {
 	text-align: center;
 }
@@ -72,9 +80,10 @@ $navbar-default-bg: #2f302f;
 }
 
 .well{
-	width:95% ;
+	width:75% ;
 	margin-left: 15px;
 	margin-right: 15px;
+}
 
 .article-title{
 	font-size: 1.7em;
@@ -87,10 +96,6 @@ $navbar-default-bg: #2f302f;
 	border-top: 1px solid #2f302f;
 	padding-top: 15px;
 	padding-bottom: 15px;
-
-
-}
-
 
 
 }
