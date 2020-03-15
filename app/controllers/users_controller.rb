@@ -8,9 +8,10 @@ class UsersController < ApplicationController
 
 	def create
 		@user= User.new(user_params)
-		if @user.save 
+		if @user.save
+			session[:user_id] = @user.id
 			flash[:success]="user was succesfully created"
-			redirect_to articles_path
+			redirect_to user_path(@user)
 		else
 			flash[:danger]="user is not created"
 			render "new"
