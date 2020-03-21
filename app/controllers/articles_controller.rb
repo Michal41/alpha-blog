@@ -42,8 +42,7 @@ class ArticlesController < ApplicationController
 
 	def update
 		@article = Article.find(params[:id])
-		if @article.update(title:params[:article][:title],
-				description:params[:article][:description])
+		if @article.update(article_params)
 			flash[:notice] = "Upadated Succesfully"
 			redirect_to article_path(@article)
 		else
@@ -56,7 +55,7 @@ class ArticlesController < ApplicationController
 
 	private
 		def article_params
-			params.require(:article).permit(:title, :description)
+			params.require(:article).permit(:title, :description,category_ids:[])
 
 		end
 		def set_article
