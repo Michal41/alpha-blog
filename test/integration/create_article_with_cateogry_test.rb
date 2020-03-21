@@ -21,6 +21,9 @@ class CreateArticleWithCategoryTest < ActionDispatch::IntegrationTest
 			follow_redirect!
 		end
 		assert_template "articles/show"
+		get category_path(@category)
+		assert_match "sports", response.body
+		assert_select 'small'
 	end
 
 end	
